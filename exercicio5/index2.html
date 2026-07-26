@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Naciolidade</title>
+</head>
+<body>
+    <h1> Sistema de Naciolidade</h1>
+    Seu pais: <input type="text" id="txtpais">
+    <input type="button" value="declara" onclick="demarca()">
+    <div id="res">Resposta</div>
+    <script>
+        function demarca() {
+        var txtp = document.getElementById('txtpais')
+        var pais = txtp.value.toLowerCase() //pega o texto digitado e converte para miniusculo
+        var res = document.getElementById('res')
+        res.innerHTML = 'Sua nacionalidade é '
+        if(pais == 'br' || pais == 'brasil'){
+            res.innerHTML += ('Brasileiro')
+        } 
+        else {
+            res.innerHTML += ('Estrangeiro')
+        }
+        }
+    </script>
+</body>
+</html>

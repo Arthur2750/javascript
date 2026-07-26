@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font:normal 20pt Arial;
+            background-color: rgb(82, 209, 82);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+    <script>
+         var a = document.getElementById('area')
+         a.addEventListener('click', clicar)
+         a.addEventListener('mouseenter', entrar)
+         a.addEventListener('mouseout', sair)
+        //a.addeventlistener ele observa se tal ação esta acontecendo ou vai acontece sem precisa que adicione no html
+        function clicar()  {
+            a.innerText = 'clicou!'
+            a.style.background = 'blue'
+        } //function serve para quando rola uma evento ele como a funciona o exemplo e clicar ai pagina responde de acordo com a função
+        function entrar() {
+            a.innerText = 'entrou!'
+            a.style.backgroundColor = 'green'
+        }
+        function sair() {
+            a.innerText = 'saiu!'
+            a.style.background = 'red'
+        }
+    </script>
+</body>
+</html>
