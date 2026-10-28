@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fatorial</h1>
+    <input type="number" name="n1" id="n1">
+    <button id="fatorial" onclick="fatorial()">Calcule</button>
+    <div id="res">Resultado</div>
+    <script>
+    function fatorial(){
+    let n = Number(document.getElementById('n1').value)
+    let res = document.getElementById('res')
+    let f = 1
+    for (let i = 1; i <= n; i++){
+        f *= i
+    res.innerHTML = `O fatorial é ${f}`
+}
+    }
+   
+    </script>
+</body>
+</html>
